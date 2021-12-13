@@ -1,5 +1,6 @@
 package com.example.recyclerview;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,18 +14,19 @@ import java.util.List;
 
 public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
     List<friends> friendsList;
+    Activity mAct;
 
 
-
-    public myRVA(List<friends> friendsList, MainActivity mainActivity) {
+    public myRVA(List<friends> friendsList, Activity mAct) {
         this.friendsList = friendsList;
+        this.mAct = mAct;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.itemlayout, parent, false);
+                .inflate(R.layout.friends, parent, false);
         return new MyViewHolder(itemView);
 
     }
@@ -34,7 +36,7 @@ public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
         holder.data=friendsList.get(position);
         holder.textViewFriendName.setText(holder.data.getName());
         holder.textViewdateFriend.setText(String.valueOf(holder.data.getDob()));
-        holder.imageViewFriend.setImageResource(holder.data.getId());
+       // holder.imageViewFriend.setImageResource(holder.data.getId());
         holder.textViewCityFriend.setText(holder.data.getCity());
     }
 

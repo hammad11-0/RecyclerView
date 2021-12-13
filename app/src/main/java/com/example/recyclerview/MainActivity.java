@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
         friends f7 = new friends(8, "Hashim", 1987, "Lahore");
 
 
-        friendsList.addAll(Arrays.asList(new friends[]{f0, f1, f2, f3, f4, f5, f6, f7,}));
+        friendsList.addAll(Arrays.asList(new friends[]{f0, f1, f2, f3, f4, f5, f6, f7}));
         r = findViewById(R.id.recyclerView);
+
         r.setLayoutManager(l1);
+
         a = new myRVA(friendsList, MainActivity.this) {
 
         };
