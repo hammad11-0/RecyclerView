@@ -16,7 +16,7 @@ public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
 
 
 
-    public myRVA(List<friends> friendsList) {
+    public myRVA(List<friends> friendsList, MainActivity mainActivity) {
         this.friendsList = friendsList;
     }
 

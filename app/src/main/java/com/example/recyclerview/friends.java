@@ -5,7 +5,10 @@ public class friends {
     private String name;
     private int dob;
     private String city;
-    
+
+
+
+
     public int getId() {
         return id;
     }
@@ -40,7 +43,7 @@ public class friends {
 
 
 
-    public void friends(int i,String n,String c,int d)
+    public friends(int i,String n,int d,String c)
     {
         this.id=i;
         this.name=n;
