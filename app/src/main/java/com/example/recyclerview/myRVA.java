@@ -1,5 +1,6 @@
 package com.example.recyclerview;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -22,17 +23,24 @@ public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.itemlayout, parent, false);
+        return new MyViewHolder(itemView);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.data=friendsList.get(position);
+        holder.textViewFriendName.setText(holder.data.getName());
+        holder.textViewdateFriend.setText(String.valueOf(holder.data.getDob()));
+        holder.imageViewFriend.setImageResource(holder.data.getId());
+        holder.textViewCityFriend.setText(holder.data.getCity());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return friendsList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
