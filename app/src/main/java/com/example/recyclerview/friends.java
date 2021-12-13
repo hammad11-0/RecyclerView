@@ -50,7 +50,6 @@ public class friends {
         this.dob=d;
         this.city=c;
 
-
     }
 
 
