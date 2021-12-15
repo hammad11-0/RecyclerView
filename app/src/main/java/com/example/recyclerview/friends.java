@@ -6,6 +6,16 @@ public class friends {
     private int dob;
     private String city;
 
+    public int getId2() {
+        return id2;
+    }
+
+    public void setId2(int id2) {
+        this.id2 = id2;
+    }
+
+    private int id2;
+
 
 
 
@@ -43,12 +53,13 @@ public class friends {
 
 
 
-    public friends(int i,String n,int d,String c)
+    public friends(int i, String n, int d, String c, int ic_launcher_background)
     {
         this.id=i;
         this.name=n;
         this.dob=d;
         this.city=c;
+        this.id2=ic_launcher_background;
 
     }
 
