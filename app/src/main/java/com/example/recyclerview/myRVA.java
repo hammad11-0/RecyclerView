@@ -32,6 +32,7 @@ public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
     }
 
     @Override
+
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.data=friendsList.get(position);
         holder.textViewFriendName.setText(holder.data.getName());
