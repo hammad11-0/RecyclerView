@@ -39,6 +39,7 @@ public class myRVA extends RecyclerView.Adapter<myRVA.MyViewHolder> {
         holder.textViewdateFriend.setText(String.valueOf(holder.data.getDob()));
         //holder.imageViewFriend.setImageResource(holder.data.getId());
         holder.textViewCityFriend.setText(holder.data.getCity());
+        int a;
     }
 
     @Override
